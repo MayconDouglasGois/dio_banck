@@ -1,28 +1,23 @@
-import { ChakraProvider,Flex, Image} from "@chakra-ui/react";
-import { Login } from "./components/login";
+import { ChakraProvider } from "@chakra-ui/react";
+import { BrowserRouter } from "react-router-dom";
+import React from "react";
+import Layout from "./components/Layout";
+import {UseContextProvider} from "./hooks/useContextProvider";
+import AppRoutes from "./Routes";
 
-function App() {
+function App(): JSX.Element {
+  React.useEffect(() => {});
+
   return (
-    <ChakraProvider>
-        <Flex 
-        minHeight="100vh" 
-        justifyContent="center" 
-        backgroundColor="rgb(30, 25, 44)" 
-        flexDirection="column"
-        alignItems="center"
-        >
-            <Flex justifyContent="center" wrap="wrap" >
-              <Image
-                pr="30px"
-                borderRight="2px solid rgb(228, 16, 93)"
-                mr="40px"
-                boxSize="300px"
-                src="logo.svg"
-              />
-              <Login />
-            </Flex>
-        </Flex>
-    </ChakraProvider>
+    <BrowserRouter>
+      <UseContextProvider>
+        <ChakraProvider>
+          <Layout>
+              <AppRoutes/>
+          </Layout>
+        </ChakraProvider>
+      </UseContextProvider>
+    </BrowserRouter>
   );
 }
 
