@@ -54,7 +54,7 @@ export const Home = (): JSX.Element => {
           <SimpleGrid columns={2} spacingX='40px' spacingY='20px'>
           <CardBody backgroundColor="white" p="15px" borderRadius="15px" mt="6px">
           <Text fontWeight="bold" color="rgb(228, 16, 93)" mb="6px">
-              Saldo
+              Data
               </Text>
             <Text fontWeight="bold" >
             {dataFormatada}
