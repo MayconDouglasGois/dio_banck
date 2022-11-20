@@ -41,8 +41,6 @@ export const Home = (): JSX.Element => {
   return (
     <Flex justifyContent="center" wrap="wrap">
       <Image src="/imageBank.png" />
-
-        {/* {userData?.name !== undefined && userData?.name !== null ? ( */}
       <Center>
         <Card align="center">
           <CardHeader mb="16px">
